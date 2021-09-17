@@ -47,7 +47,7 @@ URL : http://localhost:9292/order/paradise <br>
 But here, as 'User' acts as consumer and consumed our Order, thus we can see same message at console and not at RabbitMQ dashboard's Queues.
 
 # Exchange Types:
-	Though AMQP has officially 4 types of exchanges. But with little tweak in direct exchange, there exist another 'Default Exchage' too, which makes it 5.
+	Though AMQP has officially 4 types of exchanges. But with little tweak in direct exchange, 'Default Exchage' exist too.
 
 - Direct Exchange : The routing in direct exchange is simple — a message goes to the queues whose binding key exactly matches the routing key of the message.
 The direct exchange type is useful to distinguish messages published to the same exchange using a simple string identifier.
@@ -92,10 +92,10 @@ Dead-lettered can be republished to an exchange when any of the following events
 
 - Besides the exchange type, exchanges & queues are declared with a number of attributes, the most important of which are:
 
-#Name
-#Durability - Durable exchanges & queues survive broker restart whereas transient exchanges & queues don't (they have to be redeclared when broker comes back online). 
-#Auto-delete (exchange is deleted when last queue is unbound from it; queue that has had at least one consumer is deleted when last consumer unsubscribes).
-#Arguments (optional for both queue & exchange, used by plugins and broker-specific features such as message TTL, queue length limit, etc).
+#Name<br>
+#Durability - Durable exchanges & queues survive broker restart whereas transient exchanges & queues don't (they have to be redeclared when broker comes back online).<br>
+#Auto-delete (exchange is deleted when last queue is unbound from it; queue that has had at least one consumer is deleted when last consumer unsubscribes).<br>
+#Arguments (optional for both queue & exchange, used by plugins and broker-specific features such as message TTL, queue length limit, etc).<br>
 
 # Sources to learn :
 
